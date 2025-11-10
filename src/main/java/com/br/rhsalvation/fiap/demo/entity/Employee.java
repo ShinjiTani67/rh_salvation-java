@@ -22,12 +22,6 @@ public class Employee {
     @Column(nullable = false, unique = true)
     private String nome;
 
-    @Column(nullable = false, unique = true, length = 11)
-    private String cpf;
-
-    @Column(nullable = false, unique = true, length = 11)
-    private String telefone;
-
     @Column(nullable = false, unique = true)
     private String email;
 
