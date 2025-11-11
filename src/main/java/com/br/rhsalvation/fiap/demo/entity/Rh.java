@@ -8,12 +8,12 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
 import java.util.UUID;
-
+  
 @Entity
 @Data
 @ToString
-@Table(name="tb_employee")
-public class Employee {
+@Table(name="tb_rh")
+public class Rh {
 
     @Id
     @Column(columnDefinition = "UUID")
@@ -29,8 +29,6 @@ public class Employee {
     private String senha;
 
     @Column(nullable = false)
-    private String position;
+    private String role = "ROLE_RH";
 
-    @Column(nullable = false)
-    private String role = "ROLE_USER";
 }
