@@ -6,10 +6,16 @@ import lombok.extern.java.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.br.rhsalvation.fiap.demo.repository.EmployeeRepository;
+
 @Controller
 @RequestMapping("/employee")
-@AllArgsConstructor
 @Log
 public class EmployeeController {
-    //fazer controller
+    private final EmployeeRepository repository;
+
+    public EmployeeController(EmployeeRepository repository){
+        this.repository = repository;
+    } 
+    
 }
