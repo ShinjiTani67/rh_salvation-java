@@ -2,6 +2,10 @@ package com.br.rhsalvation.fiap.demo.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import com.br.rhsalvation.fiap.demo.dto.EmployeeDTO;
+import com.br.rhsalvation.fiap.demo.entity.Employee;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -15,20 +19,18 @@ public class EmployeeService {
     private EmployeeDTO convertToDTO(Employee employee) {
         EmployeeDTO dto = new EmployeeDTO();
         dto.setUuid(employee.getUuid());
-        dto.setCpf(employee.getCpf());
         dto.setNome(employee.getNome());
         dto.setEmail(employee.getEmail());
-        dto.setTelefone(employee.getTelefone());
+        dto.setPosition(employee.getPosition());
         return dto;
     }
 
     private Employee convertToEntity(EmployeeDTO dto) {
         Employee employee = new Employee();
         employee.setUuid(dto.getUuid());
-        employee.setCpf(dto.getCpf());
         employee.setEmail(dto.getEmail());
         employee.setNome(dto.getNome());
-        employee.setTelefone(dto.getTelefone());
+        employee.setPosition(dto.getPosition());
         return employee;
     }
 

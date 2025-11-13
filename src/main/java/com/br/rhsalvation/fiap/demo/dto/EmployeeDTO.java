@@ -26,4 +26,6 @@ public class EmployeeDTO {
     @NotBlank(message = "Senha é obrigatória")
     private String senha;
 
+    @NotBlank(message = "Posição é obrigatória")
+    private String position;
 }
