@@ -24,9 +24,10 @@ public class EmployeeController {
     private final EmployeeRepository repository;
     private final EmployeeService service;
 
-    public EmployeeController(EmployeeRepository repository){
+    public EmployeeController(EmployeeRepository repository, EmployeeService service){
         this.repository = repository;
-    } 
+        this.service = service;
+    }
 
     @GetMapping("/list")
 public String listEmployee(Model model) {
