@@ -2,6 +2,7 @@ package com.br.rhsalvation.fiap.demo.controller;
 
 import com.br.rhsalvation.fiap.demo.dto.EmployeeDTO;
 import com.br.rhsalvation.fiap.demo.entity.Employee;
+import com.br.rhsalvation.fiap.demo.service.EmployeeService;
 import jakarta.validation.Valid;
 import lombok.extern.java.Log;
 import org.springframework.security.core.Authentication;
@@ -19,7 +20,9 @@ import java.util.UUID;
 @RequestMapping("/employee")
 @Log
 public class EmployeeController {
+
     private final EmployeeRepository repository;
+    private final EmployeeService service;
 
     public EmployeeController(EmployeeRepository repository){
         this.repository = repository;
@@ -74,30 +77,6 @@ public String editEmployee(@PathVariable UUID uuid, Model model) {
 public String deleteEmployee(@PathVariable UUID uuid) {
     service.deleteById(uuid);
     return "redirect:employeelist";
-}
-
-@GetMapping
-public String home(Model model, Authentication authentication) {
-    if (authentication != null) {
-        String email = authentication.getName();
-        Optional<Employee> optionalEmployee = employeeRepository.findByEmail(email);
-
-        if (optionalEmployee.isPresent()) {
-            Employee employee = optionalEmployee.get();
-            model.addAttribute("employee", employee);
-
-            Address address = employee.getAddress();
-            if (address != null) {
-                model.addAttribute("address", address);
-
-                List<FloodZone> floodZones = floodZoneRepository.findByAddress_Uuid(address.getUuid());
-                model.addAttribute("floodZones", floodZones);
-            } else {
-                model.addAttribute("floodZones", List.of());
-            }
-        }
     }
-    return "employee";
-}
 
 }

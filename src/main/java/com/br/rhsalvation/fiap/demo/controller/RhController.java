@@ -76,29 +76,5 @@ public String editRh(@PathVariable UUID uuid, Model model) {
 public String deleteRh(@PathVariable UUID uuid) {
     service.deleteById(uuid);
     return "redirect:rhlist";
-}
-
-@GetMapping
-public String home(Model model, Authentication authentication) {
-    if (authentication != null) {
-        String email = authentication.getName();
-        Optional<Rh> optionalRh = rhRepository.findByEmail(email);
-
-        if (optionalRh.isPresent()) {
-            Rh rh = optionalRh.get();
-            model.addAttribute("rh", rh);
-
-            Address address = rh.getAddress();
-            if (address != null) {
-                model.addAttribute("address", address);
-
-                List<FloodZone> floodZones = floodZoneRepository.findByAddress_Uuid(address.getUuid());
-                model.addAttribute("floodZones", floodZones);
-            } else {
-                model.addAttribute("floodZones", List.of());
-            }
-        }
     }
-    return "rh";
-}
 }
