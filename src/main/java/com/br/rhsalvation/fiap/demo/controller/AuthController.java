@@ -1,5 +1,11 @@
 package com.br.rhsalvation.fiap.demo.controller;
 
+import com.br.rhsalvation.fiap.demo.dto.LoginRequest;
+import com.br.rhsalvation.fiap.demo.dto.LoginResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

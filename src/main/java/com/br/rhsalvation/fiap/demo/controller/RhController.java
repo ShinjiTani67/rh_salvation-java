@@ -1,10 +1,19 @@
 package com.br.rhsalvation.fiap.demo.controller;
 
+import com.br.rhsalvation.fiap.demo.dto.RhDTO;
+import com.br.rhsalvation.fiap.demo.entity.Rh;
+import jakarta.validation.Valid;
 import lombok.extern.java.Log;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
 import com.br.rhsalvation.fiap.demo.repository.RhRepository;
+
+import java.util.Optional;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/rh")

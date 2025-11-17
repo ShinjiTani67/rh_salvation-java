@@ -1,6 +1,9 @@
 package com.br.rhsalvation.fiap.demo.service;
 
 
+import com.br.rhsalvation.fiap.demo.dto.RhDTO;
+import com.br.rhsalvation.fiap.demo.entity.Rh;
+import com.br.rhsalvation.fiap.demo.repository.RhRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -16,20 +19,16 @@ public class RhService {
     private RhDTO convertToDTO(Rh rh) {
         RhDTO dto = new RhDTO();
         dto.setUuid(rh.getUuid());
-        dto.setCpf(rh.getCpf());
         dto.setNome(rh.getNome());
         dto.setEmail(rh.getEmail());
-        dto.setTelefone(rh.getTelefone());
         return dto;
     }
 
     private Rh convertToEntity(RhDTO dto) {
         Rh rh = new Rh();
         rh.setUuid(dto.getUuid());
-        rh.setCpf(dto.getCpf());
         rh.setEmail(dto.getEmail());
         rh.setNome(dto.getNome());
-        rh.setTelefone(dto.getTelefone());
         return rh;
     }
 
