@@ -19,6 +19,7 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/employee")
 @Log
+@CrossOrigin(origins = "http://localhost:3000")
 public class EmployeeController {
 
     private final EmployeeRepository repository;

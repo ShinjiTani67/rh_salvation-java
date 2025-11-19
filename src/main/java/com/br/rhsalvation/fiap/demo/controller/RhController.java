@@ -16,6 +16,7 @@ import java.util.UUID;
 @RequestMapping("/rh")
 @Log
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
 public class RhController {
 
     private final RhService service;
