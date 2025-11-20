@@ -23,4 +23,4 @@ contribuindo tanto para o crescimento dos colaboradores quanto para a eficiênci
 
 ## Video
 
-https://youtu.be/kTeoWnb18W4
+- https://youtu.be/kTeoWnb18W4
