@@ -24,7 +24,7 @@ public class UserRestController {
             return ResponseEntity.badRequest().body("Email já cadastrado");
         }
 
-        user.setRole(Role.EMPLOYEE); // padrão
+        user.setRole(Role.EMPLOYEE);
         repository.save(user);
 
         return ResponseEntity.ok("Usuário cadastrado com sucesso!");
