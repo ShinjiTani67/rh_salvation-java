@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   postgres:
     image: postgres:15
@@ -17,7 +15,7 @@ services:
 
   api:
     build:
-      context: ./src
+      context: .
       dockerfile: Dockerfile
     container_name: rh-api
     depends_on:
