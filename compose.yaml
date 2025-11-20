@@ -17,7 +17,7 @@ services:
 
   api:
     build:
-      context: .
+      context: ./src
       dockerfile: Dockerfile
     container_name: rh-api
     depends_on:
