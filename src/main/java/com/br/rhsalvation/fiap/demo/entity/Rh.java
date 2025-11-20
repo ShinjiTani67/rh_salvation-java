@@ -1,12 +1,13 @@
 package com.br.rhsalvation.fiap.demo.entity;
 
-
+import com.br.rhsalvation.fiap.demo.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
+import java.util.UUID;
 
 import java.util.UUID;
-  
+
 @Entity
 @Data
 @ToString
@@ -28,6 +29,6 @@ public class Rh {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String role = "ROLE_RH";
+    private Role role = Role.RH;
 
 }

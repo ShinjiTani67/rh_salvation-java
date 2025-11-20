@@ -1,6 +1,6 @@
 package com.br.rhsalvation.fiap.demo.enums;
 
-public enum Roles {
+public enum Role {
     RH,
     EMPLOYEE
 }

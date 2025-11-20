@@ -1,10 +1,9 @@
 package com.br.rhsalvation.fiap.demo.entity;
 
+import com.br.rhsalvation.fiap.demo.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
-import jakarta.persistence.Id;
-
 import java.util.UUID;
 
 @Entity
@@ -31,5 +30,5 @@ public class Employee {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String role = "ROLE_USER";
+    private Role role = Role.EMPLOYEE;
 }
