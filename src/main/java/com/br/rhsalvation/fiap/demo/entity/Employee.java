@@ -29,6 +29,7 @@ public class Employee {
     @Column(nullable = false)
     private String position;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private String role = "ROLE_USER";
 }

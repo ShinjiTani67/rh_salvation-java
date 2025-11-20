@@ -26,6 +26,7 @@ public class Rh {
     @Column(nullable = false)
     private String senha;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private String role = "ROLE_RH";
 
