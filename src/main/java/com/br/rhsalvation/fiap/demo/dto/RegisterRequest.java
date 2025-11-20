@@ -1,6 +1,5 @@
 package com.br.rhsalvation.fiap.demo.dto;
 
-
 import com.br.rhsalvation.fiap.demo.enums.Role;
 import lombok.Data;
 
