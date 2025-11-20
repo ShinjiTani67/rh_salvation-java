@@ -22,3 +22,5 @@ contribuindo tanto para o crescimento dos colaboradores quanto para a eficiênci
 - https://github.com/ShinjiTani67/rh_salvation--web-react.git
 
 ## Video
+
+https://youtu.be/kTeoWnb18W4
