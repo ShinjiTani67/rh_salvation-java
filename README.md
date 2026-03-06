@@ -6,6 +6,8 @@
 - [Descrição]
 - [Back-end]
 - [Video]
+- [Deploy]
+- [Troubleshooting]
 
 ## Integrantes  
 - Fernando Shinji Tanigushi RM553587
@@ -24,3 +26,24 @@ contribuindo tanto para o crescimento dos colaboradores quanto para a eficiênci
 ## Video
 
 - https://youtu.be/kTeoWnb18W4
+
+## Deploy
+- Certifique-se de que o Docker e o Docker Compose estejam instalados na máquina.
+- No diretório do projeto, execute o comando abaixo para construir e iniciar os containers:
+bash
+docker-compose up --build
+- Após a inicialização dos containers, a aplicação poderá ser acessada no navegador pelo endereço:
+http://localhost:8083
+
+## Troubleshooting
+
+- Caso ocorram problemas durante a execução do projeto, algumas verificações podem ser realizadas:
+- Verificar se os containers estão em execução:
+  docker ps
+- Verificar os logs dos containers:
+  docker logs rh-api
+  docker logs rh-postgres
+- O projeto possui um Healthcheck configurado para o PostgreSQL, que garante que a API Java só será iniciada após o banco de dados estar disponível.
+- Caso algum erro ocorra na inicialização, recomenda-se reconstruir os containers:
+  docker-compose down
+  docker-compose up --build
