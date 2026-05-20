@@ -35,8 +35,7 @@ contribuindo tanto para o crescimento dos colaboradores quanto para a eficiênci
 - No diretório do projeto, execute o comando abaixo para construir e iniciar os containers:
 bash
 docker-compose up --build
-- Após a inicialização dos containers, a aplicação poderá ser acessada no navegador pelo endereço:
-http://localhost:8083
+-Rode o scrpit
 
 ## Troubleshooting
 
