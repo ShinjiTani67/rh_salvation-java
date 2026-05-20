@@ -35,7 +35,7 @@ contribuindo tanto para o crescimento dos colaboradores quanto para a eficiênci
 - No diretório do projeto, execute o comando abaixo para construir e iniciar os containers:
 bash
 docker-compose up --build
--Rode o scrpit
+- Rode o scrpit
 
 ## Troubleshooting
 
