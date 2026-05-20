@@ -3,6 +3,7 @@
 ## Índice 
 
 - [Integrantes]
+- [Arquitetura]
 - [Descrição]
 - [Back-end]
 - [Video]
@@ -11,6 +12,8 @@
 
 ## Integrantes  
 - Fernando Shinji Tanigushi RM553587
+  
+## Arquitetura
 
 ## Descrição
 Rh_Salvation é um sistema desenvolvido para apoiar a gestão estratégica de pessoas, 
