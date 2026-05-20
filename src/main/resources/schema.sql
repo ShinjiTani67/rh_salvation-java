@@ -1,3 +1,6 @@
+-- EXEUTAR
+-- psql -U postgres -f schema.sql
+
 CREATE DATABASE appdb;
 \c appdb;
 
